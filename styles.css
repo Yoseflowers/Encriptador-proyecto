@@ -1,0 +1,286 @@
+:root {
+    --color-primaria:  #F1E5D1;
+    --color-secundaria: #FFFFFF;
+    --color-terciaria: #987070;
+    --color-cuaternario: #FFE7E7;
+    --color-letras: #240A34;
+    --color-texteame: #DBB5B5;
+    --color-copy: #0A3871;
+    --color-card: #495057;
+    --color-h2: #343A40;
+    --color-sombra: #000000;
+    --fuente-Inter:'Inter', sans-serif;
+    
+}
+
+
+body{
+margin: 0;
+font-family: var(--fuente-Inter);
+min-height: 100vh;
+background: linear-gradient(to bottom, var(--color-primaria), var(--color-terciaria));
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+display: flex;
+height: 100%;
+padding: 10px;
+box-sizing: border-box;
+}
+
+.footer{
+color: var(--color-letras);
+text-align: center;
+
+
+}
+
+.input-section, .output-section {
+padding: 90px;
+display: flex;
+flex-direction: column;
+margin-right: 50px;
+}
+
+.input-section {
+flex: 2;
+}
+
+.logo {
+margin-bottom: 1px;
+padding: 20px; 
+}
+
+textarea {
+width: 95%;
+height: 600px;
+border: 2px solid var(--color-texteame);
+border-radius: 10px;
+padding: 20px;
+font-size: 1.5rem;
+resize: none;
+margin-bottom: 20px;
+}
+
+.buttons {
+display: flex;
+gap: 100px;
+margin-bottom: 100px;
+}
+
+.btn {
+padding: 24px;
+width: 328px;
+height: 67px;
+border: none;
+border-radius: 24px;
+cursor: pointer;
+font-size: 1rem;
+flex: 1;
+transition: all 0.3s ease;
+}
+
+.encrypt {
+background-color: var(--color-terciaria);
+color: var(--color-secundaria);
+}
+
+.encrypt:hover {
+background-color: var(--color-cuaternario);
+color: var(--color-letras);
+}
+
+.encrypt:active {
+transform: scale(0.95);
+box-shadow: 0 2px 5px var(--color-sombra);
+}
+
+.decrypt {
+background-color: var(--color-cuaternario);
+color: var(--color-letras);
+border: 1px solid var(--color-terciaria);
+}
+
+.decrypt:hover {
+background-color: var(--color-terciaria);
+}
+
+.decrypt:active {
+transform: scale(0.95);
+box-shadow: 0 2px 5px var(--color-sombra);
+}
+
+.note {
+font-size: 20px;
+padding: 24px;
+color: var(--color-card);
+}
+
+.output-section {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.card {
+background-color: var(--color-secundaria);
+border-radius: 32px;
+box-shadow: 0 24px 32px -8px var(--color-terciaria);
+padding: 35px;
+text-align: center;
+width: 100%;
+height: 80%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.card img {
+width: 100%;
+max-width: 336px;
+margin-bottom: 32px;
+}
+
+.card h2 {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--color-h2);
+margin-bottom: 16px;
+}
+
+.card p {
+font-size: 1rem;
+color: var(--color-card);
+}
+
+.copy-btn {
+padding: 24px 0;
+width: 100%;
+max-width: 328px;
+border: 1px solid var(--color-copy);
+border-radius: 24px;
+background-color: var(--color-secundaria);
+color: var(--color-copy);
+font-size: 1rem;
+cursor: pointer;
+margin-top: auto;
+transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+background-color: var(--color-copy);
+color: var(--color-secundaria);
+}
+
+.copy-btn:active {
+transform: scale(0.95);
+box-shadow: 0 2px 5px var(--color-sombra);
+}
+
+@media (max-width: 1024px) {
+.container {
+    flex-direction: column;
+    padding: 20px;
+    display: flow-root;
+    }
+
+.input-section, .output-section {
+    width: 90%;
+    padding: 20px;
+    margin-right: 0;
+    text-align: center;
+}
+
+textarea {
+    height: 300px;
+}
+
+.buttons {
+    gap: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn {
+    padding:50px;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.card {
+    height: auto;
+    width: 90%;
+}
+}
+
+@media (max-width: 768px) {
+.input-section, .output-section {
+    padding: 10px;
+}
+
+textarea {
+    font-size: 1.125rem;
+}
+
+.buttons {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card img {
+    max-width: 200px;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+}
+
+.card p {
+    font-size: 0.875rem;
+}
+
+.copy-btn {
+    padding: 15px 0;
+    font-size: 0.875rem;
+}
+}
+
+@media (max-width: 480px) {
+body {
+    height: auto;
+}
+
+.container {
+    height: auto;
+}
+
+.logo img {
+    width: 80px;
+}
+
+textarea {
+    height: 200px;
+    font-size: 1rem;
+}
+
+.note {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.btn {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.card img {
+    max-width: 150px;
+}
+}
